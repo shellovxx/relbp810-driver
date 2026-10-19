@@ -1,0 +1,10 @@
+* text=auto
+
+# Windows tools expect CRLF (cmd.exe mis-handles labels in LF batch files).
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+*.rc  text eol=crlf
+*.[iI][nN][fF] text eol=crlf
+*.[gG][pP][dD] text eol=crlf
+*.[iI][nN][iI] text eol=crlf
+*.def text eol=crlf

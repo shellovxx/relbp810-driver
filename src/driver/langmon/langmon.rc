@@ -1,0 +1,36 @@
+#pragma code_page(65001)
+#include <windows.h>
+#include "resource.h"
+#include "../version.rc.h"
+
+#define VER_DESCRIPTION "LBP-810 CAPT Language Monitor"
+#define VER_FILENAME "CNLB810L.DLL"
+#include "../version.rc"
+
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+STRINGTABLE
+BEGIN
+    IDS_PAPER_JAM     "Устраните замятие бумаги"
+    IDS_COVER_OPEN    "Закройте крышку принтера"
+    IDS_NO_CARTRIDGE  "Проверьте тонер-картридж"
+    IDS_ADD_PAPER     "Добавьте бумагу"
+    IDS_PRINT_FAILED  "Печать не выполнена"
+    IDS_SERVICE_ERROR "Ошибка сервиса"
+    IDS_CHECK_PRINTER "Проверьте принтер/кабель"
+    IDS_PRINTER_ERROR "Ошибка принтера"
+    IDS_CHANGE_PAPER  "Замените бумагу"
+END
+
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+STRINGTABLE
+BEGIN
+    IDS_PAPER_JAM     "Clear the paper jam"
+    IDS_COVER_OPEN    "Close the printer cover"
+    IDS_NO_CARTRIDGE  "Check the toner cartridge"
+    IDS_ADD_PAPER     "Add paper"
+    IDS_PRINT_FAILED  "Printing failed"
+    IDS_SERVICE_ERROR "Service error"
+    IDS_CHECK_PRINTER "Check the printer/cable"
+    IDS_PRINTER_ERROR "Printer error"
+    IDS_CHANGE_PAPER  "Replace the paper"
+END

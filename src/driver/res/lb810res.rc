@@ -1,0 +1,36 @@
+#pragma code_page(65001)
+// String resources referenced by CNLB810.GPD (*ResourceDLL: "LB810RES.DLL").
+#include <windows.h>
+#include "../version.rc.h"
+
+#define VER_DESCRIPTION "Canon LBP-810 driver resources"
+#define VER_FILENAME "LB810RES.DLL"
+#include "../version.rc"
+
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+STRINGTABLE
+BEGIN
+    1010 "Плотность тонера"
+    1011 "Светлее [-2]"
+    1012 "Светлее [-1]"
+    1013 "Стандарт"
+    1014 "Темнее [+1]"
+    1015 "Темнее [+2]"
+    1020 "Экономия тонера"
+    1030 "Автоматическое улучшение изображения"
+    1100 "Карточка указателя 3x5"
+END
+
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+STRINGTABLE
+BEGIN
+    1010 "Toner Density"
+    1011 "Lighter [-2]"
+    1012 "Lighter [-1]"
+    1013 "Standard"
+    1014 "Darker [+1]"
+    1015 "Darker [+2]"
+    1020 "Toner Save"
+    1030 "Automatic Image Refinement"
+    1100 "Index Card 3x5"
+END

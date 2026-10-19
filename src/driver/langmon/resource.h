@@ -1,0 +1,10 @@
+#pragma once
+#define IDS_PAPER_JAM      101
+#define IDS_COVER_OPEN     102
+#define IDS_NO_CARTRIDGE   103
+#define IDS_ADD_PAPER      104
+#define IDS_PRINT_FAILED   105
+#define IDS_SERVICE_ERROR  106
+#define IDS_CHECK_PRINTER  107
+#define IDS_PRINTER_ERROR  108
+#define IDS_CHANGE_PAPER   109

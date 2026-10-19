@@ -1,0 +1,4 @@
+LIBRARY LBP810CA
+EXPORTS
+    InstallDriver
+    UninstallDriver

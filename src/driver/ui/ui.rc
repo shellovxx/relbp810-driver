@@ -1,0 +1,16 @@
+#pragma code_page(65001)
+// CNLB810U.DLL resources: Canon's dialogs and strings (converted from CAP1UIK.DLL) and the
+// Canon icons/bitmaps extracted at build time (assets.rc, see scripts/canon-assets.py).
+#include <windows.h>
+#include <commctrl.h>
+#include "resource.h"
+#include "../version.rc.h"
+
+#define VER_DESCRIPTION "Canon LBP-810 Unidrv user interface plug-in"
+#define VER_FILENAME "CNLB810U.DLL"
+#include "../version.rc"
+
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#include "dialogs.rc"
+#include "strings.rc"
+#include "assets.rc"

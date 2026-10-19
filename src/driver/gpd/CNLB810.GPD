@@ -1,0 +1,285 @@
+*%
+*% Canon LBP-810 (CAPT 1.x) - Unidrv minidriver
+*% Paper geometry follows Canon's CAP1K.DLL model table (resource 200/100).
+*% Raster output is produced by the CNLB810R.DLL rendering plug-in (ImageProcessing),
+*% the CAPT protocol is handled by the CNLB810L.DLL language monitor.
+*%
+*GPDSpecVersion: "1.0"
+*GPDFileName: "CNLB810.GPD"
+*GPDFileVersion: "1.0"
+*Include: "StdNames.gpd"
+*ModelName: "Canon LBP-810"
+*MasterUnits: PAIR(600, 600)
+*ResourceDLL: "LB810RES.DLL"
+*PrinterType: PAGE
+*MaxCopies: 999
+*PrintRate: 8
+*PrintRateUnit: PPM
+*FontCartSlots: 0
+*RotateCoordinate?: FALSE
+*RotateRaster?: FALSE
+*RotateFont?: FALSE
+
+*Feature: Orientation
+{
+    *rcNameID: =ORIENTATION_DISPLAY
+    *DefaultOption: PORTRAIT
+    *Option: PORTRAIT
+    {
+        *rcNameID: =PORTRAIT_DISPLAY
+    }
+    *Option: LANDSCAPE_CC90
+    {
+        *rcNameID: =LANDSCAPE_DISPLAY
+    }
+}
+
+*Feature: InputBin
+{
+    *rcNameID: =PAPER_SOURCE_DISPLAY
+    *DefaultOption: AUTO
+    *Option: AUTO
+    {
+        *rcNameID: =AUTO_DISPLAY
+    }
+}
+
+*Feature: Resolution
+{
+    *rcNameID: =RESOLUTION_DISPLAY
+    *DefaultOption: Option1
+    *Option: Option1
+    {
+        *Name: "600 x 600 " =DOTS_PER_INCH
+        *DPI: PAIR(600, 600)
+        *TextDPI: PAIR(600, 600)
+        *SpotDiameter: 100
+        *Command: CmdSendBlockData { *Cmd : "" }
+    }
+    *Option: Option2
+    {
+        *Name: "300 x 300 " =DOTS_PER_INCH
+        *DPI: PAIR(300, 300)
+        *TextDPI: PAIR(300, 300)
+        *SpotDiameter: 100
+        *Command: CmdSendBlockData { *Cmd : "" }
+    }
+}
+
+*Feature: PaperSize
+{
+    *rcNameID: =PAPER_SIZE_DISPLAY
+    *DefaultOption: A4
+    *Option: A4
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *PrintableArea: PAIR(4736, 6776)
+        *PrintableOrigin: PAIR(112, 120)
+    }
+    *Option: LETTER
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *PrintableArea: PAIR(4864, 6360)
+        *PrintableOrigin: PAIR(118, 120)
+    }
+    *Option: LEGAL
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *PrintableArea: PAIR(4864, 8160)
+        *PrintableOrigin: PAIR(118, 120)
+    }
+    *Option: B5
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *PrintableArea: PAIR(4032, 5830)
+        *PrintableOrigin: PAIR(134, 120)
+    }
+    *Option: EXECUTIVE
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *PrintableArea: PAIR(4096, 6060)
+        *PrintableOrigin: PAIR(126, 120)
+    }
+    *Option: ENV_DL
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *PrintableArea: PAIR(2368, 4956)
+        *PrintableOrigin: PAIR(116, 120)
+    }
+    *Option: ENV_10
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *PrintableArea: PAIR(2240, 5460)
+        *PrintableOrigin: PAIR(120, 120)
+    }
+    *Option: ENV_C5
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *PrintableArea: PAIR(3584, 5170)
+        *PrintableOrigin: PAIR(120, 120)
+    }
+    *Option: ENV_MONARCH
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+        *PrintableArea: PAIR(2112, 4260)
+        *PrintableOrigin: PAIR(108, 120)
+    }
+    *Option: INDEX3X5
+    {
+        *rcNameID: 1100
+        *PageDimensions: PAIR(1800, 3000)
+        *PrintableArea: PAIR(1536, 2760)
+        *PrintableOrigin: PAIR(132, 120)
+    }
+    *Option: CUSTOMSIZE
+    {
+        *rcNameID: =USER_DEFINED_SIZE_DISPLAY
+        *MinSize: PAIR(1800, 3000)
+        *MaxSize: PAIR(5100, 8400)
+        *MaxPrintableWidth: 4864
+        *MinLeftMargin: 118
+        *CenterPrintable?: TRUE
+        *TopMargin: 120
+        *BottomMargin: 120
+    }
+}
+
+*Feature: ColorMode
+{
+    *rcNameID: =COLOR_PRINTING_MODE_DISPLAY
+    *DefaultOption: Mono
+    *Option: Mono
+    {
+        *rcNameID: =MONO_DISPLAY
+        *DevNumOfPlanes: 0
+        *DevBPP: 0
+        *DrvBPP: 1
+        *Color? : FALSE
+        *IPCallbackID: 1
+    }
+}
+
+*Feature: Halftone
+{
+    *rcNameID: =HALFTONING_DISPLAY
+    *DefaultOption: HT_PATSIZE_AUTO
+    *Option: HT_PATSIZE_AUTO
+    {
+        *rcNameID: =HT_AUTO_SELECT_DISPLAY
+    }
+    *Option: HT_PATSIZE_SUPERCELL_M
+    {
+        *rcNameID: =HT_SUPERCELL_DISPLAY
+    }
+    *Option: HT_PATSIZE_6x6_M
+    {
+        *rcNameID: =HT_DITHER6X6_DISPLAY
+    }
+    *Option: HT_PATSIZE_8x8_M
+    {
+        *rcNameID: =HT_DITHER8X8_DISPLAY
+    }
+}
+
+*% ---- Canon specific quality settings (Canon "Details" dialog) ----
+*Feature: TonerDensity
+{
+    *rcNameID: 1010
+    *DefaultOption: STD
+    *Option: LIGHT2
+    {
+        *rcNameID: 1011
+    }
+    *Option: LIGHT1
+    {
+        *rcNameID: 1012
+    }
+    *Option: STD
+    {
+        *rcNameID: 1013
+    }
+    *Option: DARK1
+    {
+        *rcNameID: 1014
+    }
+    *Option: DARK2
+    {
+        *rcNameID: 1015
+    }
+}
+
+*Feature: TonerSave
+{
+    *rcNameID: 1020
+    *DefaultOption: OFF
+    *Option: OFF
+    {
+        *rcNameID: =OFF_DISPLAY
+    }
+    *Option: ON
+    {
+        *rcNameID: =ON_DISPLAY
+    }
+}
+
+*Feature: ImageRefinement
+{
+    *rcNameID: 1030
+    *DefaultOption: ON
+    *Option: ON
+    {
+        *rcNameID: =ON_DISPLAY
+    }
+    *Option: OFF
+    {
+        *rcNameID: =OFF_DISPLAY
+    }
+}
+
+*% ---- Job / page control: everything is produced by the rendering plug-in ----
+*Command: CmdStartDoc
+{
+    *Order: DOC_SETUP.1
+    *CallbackID: 1
+}
+*Command: CmdCopies
+{
+    *Order: DOC_SETUP.2
+    *CallbackID: 5
+    *Params: LIST(NumOfCopies)
+}
+*Command: CmdStartPage
+{
+    *Order: PAGE_SETUP.1
+    *CallbackID: 2
+}
+*% End commands are only sent as part of the PAGE_FINISH / JOB_FINISH sequences.
+*Command: CmdEndPage
+{
+    *Order: PAGE_FINISH.1
+    *CallbackID: 3
+}
+*Command: CmdEndJob
+{
+    *Order: JOB_FINISH.1
+    *CallbackID: 4
+}
+
+*% Unidrv's semantic check (BCheckGPDSemantics) requires CR/LF/FF; moves are absolute
+*% (thresholds 0). Their output is discarded by the plug-in's
+*% WritePrinter hook, so they are empty.
+*Command: CmdCR { *Cmd : "" }
+*Command: CmdLF { *Cmd : "" }
+*Command: CmdFF { *Cmd : "" }
+*Command: CmdXMoveAbsolute { *Cmd : "" %d[0,32767]{DestX} }
+*Command: CmdYMoveAbsolute { *Cmd : "" %d[0,32767]{DestY} }
+
+*OutputDataFormat: H_BYTE
+*OptimizeLeftBound?: FALSE
+*CursorXAfterSendBlockData: AT_GRXDATA_ORIGIN
+*CursorYAfterSendBlockData: AUTO_INCREMENT
+*CursorXAfterCR: AT_CURSOR_X_ORIGIN
+*XMoveThreshold: 0
+*YMoveThreshold: 0
+*XMoveUnit: 600
+*YMoveUnit: 600

@@ -1,0 +1,24 @@
+# Build output (build.cmd, release.cmd)
+/build/
+/out/
+
+# Local reverse-engineering workspace and the original Canon driver: Canon's files are not
+# redistributable and stay on the developer's machine (see README, "Building").
+/re/
+/LBP-810_R110_V110_Win_x32_RU_7/
+
+# Compiler and tool leftovers
+*.obj
+*.pdb
+*.ilk
+*.exp
+*.res
+*.i64
+*.idb
+__pycache__/
+*.pyc
+
+# Editors
+.vs/
+.vscode/
+*.user

@@ -1,0 +1,68 @@
+; Canon LBP-810 printer driver for 64-bit (and 32-bit) Windows 7 / 8.1 / 10 / 11
+; Unidrv minidriver + rendering and UI plug-ins + CAPT language monitor.
+
+[Version]
+Signature="$Windows NT$"
+Provider=%Provider%
+ClassGUID={4D36E979-E325-11CE-BFC1-08002BE10318}
+Class=Printer
+DriverVer=10/19/2026,1.0.0.12
+CatalogFile=cnlb810.cat
+
+[Manufacturer]
+%Canon%=Canon,NTamd64,NTx86
+
+[Canon.NTamd64]
+%LBP810% = LBP810, USBPRINT\CanonLBP-810AC2D, CanonLBP-810AC2D, LPTENUM\CanonLBP-810AC2D, Canon_LBP-810
+
+[Canon.NTx86]
+%LBP810% = LBP810, USBPRINT\CanonLBP-810AC2D, CanonLBP-810AC2D, LPTENUM\CanonLBP-810AC2D, Canon_LBP-810
+
+[LBP810]
+CopyFiles=LBP810_FILES,LBP810_MONITOR
+CoreDriverSections="{D20EA372-DD35-4950-9ED8-A6335AFE79F0},UNIDRV.OEM,UNIDRV_DATA"
+DataFile=CNLB810.GPD
+LanguageMonitor=%LanguageMonitor%
+
+[LBP810_FILES]
+CNLB810.GPD
+CNLB810.INI
+CNLB810R.DLL
+CNLB810U.DLL
+LB810RES.DLL
+
+[LBP810_MONITOR]
+CNLB810L.DLL
+
+[DestinationDirs]
+DefaultDestDir=66000
+LBP810_MONITOR=66002
+
+[PrinterPackageInstallation.amd64]
+PackageAware=TRUE
+CoreDriverDependencies={D20EA372-DD35-4950-9ED8-A6335AFE79F0}
+
+[PrinterPackageInstallation.x86]
+PackageAware=TRUE
+CoreDriverDependencies={D20EA372-DD35-4950-9ED8-A6335AFE79F0}
+
+[SourceDisksNames.amd64]
+1=%Disk%,,,amd64
+
+[SourceDisksNames.x86]
+1=%Disk%,,,x86
+
+[SourceDisksFiles]
+CNLB810.GPD=1
+CNLB810.INI=1
+CNLB810R.DLL=1
+CNLB810U.DLL=1
+LB810RES.DLL=1
+CNLB810L.DLL=1
+
+[Strings]
+Provider="relbp810 project"
+Canon="Canon"
+LBP810="Canon LBP-810"
+LanguageMonitor="LBP-810 CAPT Monitor,CNLB810L.DLL"
+Disk="Canon LBP-810 driver disk"

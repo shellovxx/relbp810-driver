@@ -1,0 +1,4 @@
+LIBRARY CNLB810U
+EXPORTS
+    DllGetClassObject PRIVATE
+    DllCanUnloadNow PRIVATE

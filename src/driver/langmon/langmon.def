@@ -1,0 +1,3 @@
+LIBRARY CNLB810L
+EXPORTS
+    InitializePrintMonitor2

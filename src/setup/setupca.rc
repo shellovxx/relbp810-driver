@@ -1,0 +1,6 @@
+#pragma code_page(65001)
+#include <windows.h>
+#include "../driver/version.rc.h"
+#define VER_DESCRIPTION "Canon LBP-810 driver setup custom actions"
+#define VER_FILENAME "LBP810CA.DLL"
+#include "../driver/version.rc"
